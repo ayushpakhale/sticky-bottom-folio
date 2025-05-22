@@ -176,6 +176,18 @@
   }
 }
 
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .animate-fade-in {
   animation: fade-in 0.7s ease-out forwards;
 }
@@ -211,6 +223,12 @@
 
 .animate-rotate-glow {
   animation: rotate-glow 10s linear infinite;
+}
+
+.animate-gradient-flow {
+  background: linear-gradient(90deg, #0f0, #090, #060);
+  background-size: 200% 200%;
+  animation: gradient-flow 3s ease infinite;
 }
 
 /* Staggered animations */
@@ -322,4 +340,80 @@
 @keyframes blink {
   from, to { border-color: transparent }
   50% { border-color: #00ff00; }
+}
+
+/* Space for fixed hero section */
+.pt-screen {
+  padding-top: 100vh;
+}
+
+/* Glitch effect */
+.glitch {
+  position: relative;
+  color: #0f0;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 0, 0, 0);
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -1px 0 red;
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -1px 0 blue;
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+  0% {
+    clip: rect(2px, 9999px, 56px, 0);
+  }
+  20% {
+    clip: rect(15px, 9999px, 16px, 0);
+  }
+  40% {
+    clip: rect(25px, 9999px, 26px, 0);
+  }
+  60% {
+    clip: rect(28px, 9999px, 93px, 0);
+  }
+  80% {
+    clip: rect(35px, 9999px, 56px, 0);
+  }
+  100% {
+    clip: rect(19px, 9999px, 67px, 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip: rect(63px, 9999px, 52px, 0);
+  }
+  20% {
+    clip: rect(13px, 9999px, 78px, 0);
+  }
+  40% {
+    clip: rect(26px, 9999px, 46px, 0);
+  }
+  60% {
+    clip: rect(42px, 9999px, 78px, 0);
+  }
+  80% {
+    clip: rect(67px, 9999px, 23px, 0);
+  }
+  100% {
+    clip: rect(24px, 9999px, 13px, 0);
+  }
 }
