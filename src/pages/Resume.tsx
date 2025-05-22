@@ -35,12 +35,11 @@ const Resume = () => {
       </div>
 
       {/* PDF Viewer */}
-      <div className="pdf-container bg-black/50 p-2 border border-green-800 rounded-lg mb-10">
+      <div className="pdf-container bg-black/50 p-2 border border-green-800 rounded-lg mb-10" ref={pdfContainerRef}>
         <iframe 
           src={`${RESUME_PDF_URL}#toolbar=0`} 
           className="w-full h-full"
           title="Resume PDF"
-          ref={pdfContainerRef}
         />
         <div className="text-center text-sm text-muted-foreground mt-2">
           If the PDF doesn't load, please <a href={RESUME_PDF_URL} target="_blank" rel="noreferrer" className="text-green-400 hover:underline">open it directly</a> or download it.
