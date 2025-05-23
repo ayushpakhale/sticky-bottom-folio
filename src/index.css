@@ -353,23 +353,6 @@ input, textarea, [contenteditable="true"] {
   50% { border-color: #00ff00; }
 }
 
-/* Professional text animation - no cursor/caret */
-.professional-text {
-  opacity: 0;
-  animation: professional-fade-in 0.8s ease-out forwards;
-}
-
-@keyframes professional-fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Space for fixed hero section */
 .pt-screen {
   padding-top: 100vh;
