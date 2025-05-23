@@ -80,7 +80,7 @@ const MainLayout = () => {
         </main>
       </div>
       
-      {/* Navbar overlays the content with high z-index */}
+      {/* Navbar overlays the content with high z-index and solid background */}
       <div 
         className={`fixed w-full transition-all duration-700 ease-in-out z-50 ${
           navbarPosition === "bottom" ? "bottom-0 left-0 right-0 animate-bounce-subtle" : 

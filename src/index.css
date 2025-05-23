@@ -95,6 +95,16 @@
   }
 }
 
+/* Remove text cursor from all elements by default */
+* {
+  cursor: default;
+}
+
+/* Only show text cursor on specific elements that should have it */
+input, textarea, [contenteditable="true"] {
+  cursor: text;
+}
+
 /* Enhanced Animations */
 @keyframes fade-in {
   from {
@@ -323,13 +333,14 @@
   }
 }
 
-/* Typing animation */
+/* Typing animation - only for main heading */
 .typing {
   border-right: 4px solid #00ff00;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
   animation: typing 3s steps(30, end) forwards, blink 1s step-end infinite;
+  cursor: text; /* Only the typing text should have text cursor */
 }
 
 @keyframes typing {
@@ -416,4 +427,12 @@
   100% {
     clip: rect(24px, 9999px, 13px, 0);
   }
+}
+
+/* Add select-none utility for preventing text selection */
+.select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
