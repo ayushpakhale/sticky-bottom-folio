@@ -54,28 +54,37 @@ const MainLayout = () => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Static hero content for homepage that stays fixed */}
-      <div className="fixed inset-0 flex items-center justify-center z-0 bg-black">
+      <div className="fixed inset-0 flex items-center justify-center z-0 bg-gradient-to-br from-black via-green-950/20 to-black">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 text-left space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold typing">
               Hi, I'm <span className="text-primary animate-text-shimmer">John Doe</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in" style={{animationDelay: "0.3s"}}>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in select-none" style={{animationDelay: "0.3s"}}>
               Cybersecurity Engineer specializing in network security and ethical hacking
             </p>
+            <div className="flex gap-4 animate-fade-in select-none" style={{animationDelay: "0.6s"}}>
+              <div className="px-4 py-2 bg-green-900/30 rounded-lg border border-green-700/50 animate-pulse-glow">
+                <span className="text-green-400 text-sm">5+ Years Experience</span>
+              </div>
+              <div className="px-4 py-2 bg-green-900/30 rounded-lg border border-green-700/50 animate-pulse-glow">
+                <span className="text-green-400 text-sm">Security Expert</span>
+              </div>
+            </div>
           </div>
           <div className="md:w-1/2 flex justify-center">
-            {/* Placeholder for photo - you can add your image here */}
-            <div className="w-64 h-64 rounded-full bg-gradient-to-br from-green-700/30 to-green-500/10 animate-float flex items-center justify-center">
-              <div className="text-green-500 text-opacity-50">Your Photo Here</div>
+            {/* Enhanced photo placeholder with professional styling */}
+            <div className="w-80 h-80 rounded-full bg-gradient-to-br from-green-700/40 to-green-500/20 animate-float flex items-center justify-center border-4 border-green-600/30 shadow-2xl shadow-green-900/50 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-green-400/10 to-transparent animate-rotate-glow"></div>
+              <div className="text-green-400 text-opacity-70 text-lg font-semibold select-none relative z-10">Your Photo Here</div>
             </div>
           </div>
         </div>
       </div>
       
-      {/* Content overlays the static hero content when scrolling */}
-      <div className="relative z-10 pt-screen min-h-screen">
-        <main className="flex-grow container mx-auto px-4 py-8">
+      {/* Content overlays the static hero content when scrolling with solid background */}
+      <div className="relative z-10 pt-screen min-h-screen bg-gradient-to-b from-black via-background to-black">
+        <main className="flex-grow container mx-auto px-4 py-8 bg-background/95 backdrop-blur-sm rounded-t-3xl shadow-2xl shadow-green-900/20 border-t border-green-700/30">
           <Outlet />
         </main>
       </div>
