@@ -55,7 +55,7 @@ const MainLayout = () => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Static hero content for homepage that stays fixed */}
-      <div className="fixed inset-0 flex items-center justify-center z-0 bg-black">
+      <div className="fixed inset-0 flex items-center justify-center z-10 bg-black">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 text-left space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold typing">
@@ -75,7 +75,7 @@ const MainLayout = () => {
       </div>
       
       {/* Content overlays the static hero content when scrolling with solid background */}
-      <div className="relative z-10 pt-screen min-h-screen bg-background">
+      <div className="relative z-20 mt-screen min-h-screen bg-background">
         <main className="flex-grow container mx-auto px-4 py-8 bg-background">
           <Outlet />
         </main>
