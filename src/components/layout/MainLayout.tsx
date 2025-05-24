@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import ayushImage from "@/assets/12.jpg";
 
 const MainLayout = () => {
   const [navbarPosition, setNavbarPosition] = useState("bottom"); // "bottom", "moving", "top"
@@ -58,16 +59,16 @@ const MainLayout = () => {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 text-left space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold typing">
-              Hi, I'm <span className="text-primary animate-text-shimmer">John Doe</span>
+              Hi, I'm <span className="text-primary animate-text-shimmer">Ayush Pakhale</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in" style={{animationDelay: "0.3s"}}>
-              Cybersecurity Engineer specializing in network security and ethical hacking
+            Cyber Security Engineer leveraging SOAR to enhance network security and execute ethical hacking with precision.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center">
             {/* Placeholder for photo - you can add your image here */}
-            <div className="w-64 h-64 rounded-full bg-gradient-to-br from-green-700/30 to-green-500/10 animate-float flex items-center justify-center">
-              <div className="text-green-500 text-opacity-50">Your Photo Here</div>
+            <div className="w-64 h-64 rounded-full overflow-hidden animate-float">
+              <img src={ayushImage} alt="Ayush Pakhale" className="w-full h-full object-cover rounded-full"/>
             </div>
           </div>
         </div>

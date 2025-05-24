@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { FileDown } from "lucide-react";
 
 // Path to your Resume PDF file
-const RESUME_PDF_URL = "/resume.pdf";
+const RESUME_PDF_URL = "/Ayush_Pakhale_CyberSecurity.pdf";
 
 const Resume = () => {
   const pdfContainerRef = useRef<HTMLDivElement>(null);

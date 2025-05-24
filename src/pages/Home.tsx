@@ -25,11 +25,11 @@ const Home = () => {
   
   // Animation for skills progress bars
   const [skills, setSkills] = useState([
-    { name: "Network Security", value: 0, maxValue: 95 },
-    { name: "Penetration Testing", value: 0, maxValue: 90 },
-    { name: "SIEM Tools", value: 0, maxValue: 85 },
+    { name: "Cortex XSIAM/XSOAR", value: 0, maxValue: 95 },
+    { name: "Servicenow SOAR", value: 0, maxValue: 90 },
+    { name: "ServiceNow", value: 0, maxValue: 85 },
     { name: "Cryptography", value: 0, maxValue: 80 },
-    { name: "Cloud Security", value: 0, maxValue: 85 },
+    { name: "Python/JavaScript", value: 0, maxValue: 85 },
     { name: "Threat Intelligence", value: 0, maxValue: 75 },
     { name: "Incident Response", value: 0, maxValue: 90 },
     { name: "Secure Coding", value: 0, maxValue: 70 },
@@ -124,21 +124,24 @@ const Home = () => {
                 <div className={`absolute left-1/2 transform -translate-x-1/2 -mt-2 w-5 h-5 rounded-full ${visibleSections.experience ? 'bg-primary animate-pulse-glow' : 'bg-green-900/30'} z-10 transition-all duration-1000`}></div>
                 <div className="flex items-center justify-between">
                   <div className={`w-[45%] pr-8 text-right timeline-item-left ${visibleSections.experience ? 'animate-fade-in' : 'opacity-0'}`} style={{animationDelay: "0.2s"}}>
-                    <h3 className="text-xl font-bold text-primary typing">2021 - Present</h3>
+                    <h3 className="text-xl font-bold text-primary">2025 - Present</h3>
                     <p className="text-muted-foreground">Full-time</p>
                   </div>
                   <div className={`w-[45%] pl-8 timeline-item-right ${visibleSections.experience ? 'animate-fade-in' : 'opacity-0'}`} style={{animationDelay: "0.4s"}}>
-                    <h3 className="text-xl font-bold mb-2 typing">Senior Cybersecurity Engineer</h3>
-                    <p className="text-muted-foreground mb-2">SecureTech Solutions</p>
+                    <h3 className="text-xl font-bold mb-2">Lead Security Engineer - SOAR</h3>
+                    <p className="text-muted-foreground mb-2">Cognizant Technology Solutions</p>
                     <Accordion type="single" collapsible>
                       <AccordionItem value="responsibilities-1" className="animate-scale-in" style={{animationDelay: "0.6s"}}>
                         <AccordionTrigger className="text-green-400 hover-glow">Responsibilities</AccordionTrigger>
                         <AccordionContent>
                           <ul className="list-disc pl-5 space-y-1">
-                            <li className="stagger-item animate-fade-in">Led security infrastructure for mission-critical systems</li>
-                            <li className="stagger-item animate-fade-in">Implemented zero-trust architecture and network segmentation</li>
-                            <li className="stagger-item animate-fade-in">Conducted penetration testing and vulnerability assessments</li>
-                            <li className="stagger-item animate-fade-in">Mentored junior security analysts and engineers</li>
+                            <li className="stagger-item animate-fade-in">Spearheaded the development of tailored SOAR playbooks for 10 distinct use cases using ServiceNow SOAR and Cortex XSIAM, resulting in a 40% reduction in manual workload for SOC teams and enhancing incident response times by 30%</li>
+                            <li className="stagger-item animate-fade-in">Migrated customers from ServiceNow SOAR to Cortex XSIAM, streamlining incident management processes and ensuring seamless integration.</li>
+                            <li className="stagger-item animate-fade-in">Designed and rigorously tested multiple playbooks in Cortex XSIAM to automate security incident workflows, reducing error rates by 30% and significantly improving system reliability and team response efficiency.</li>
+                            <li className="stagger-item animate-fade-in">Led administration of the ServiceNow platform, including eBonding integration and user onboarding; resolved 1,000+ internal support tickets in a quarter, improving uptime to 99.8% and enhancing cross-team communication by 40%.</li>
+                            <li className="stagger-item animate-fade-in">Completed in live training for Palo Alto EDU 270 on Cortex XSIAM, earning certification in best practices for XSIAM configurations and incident management.</li>
+                            <li className="stagger-item animate-fade-in">Analyzed 300+ emerging threats and vulnerabilities, delivering prioritized threat alerts and advisories to clients, which led to the identification of 40 previously unknown security risks within the first quarter.</li>
+                            <li className="stagger-item animate-fade-in">Actively learning and implementing Qualys VMDR to integrate automated vulnerability scanning and remediation into the security operations framework.</li>
                           </ul>
                         </AccordionContent>
                       </AccordionItem>
@@ -152,21 +155,20 @@ const Home = () => {
                 <div className={`absolute left-1/2 transform -translate-x-1/2 -mt-2 w-5 h-5 rounded-full ${visibleSections.experience ? 'bg-primary animate-pulse-glow' : 'bg-green-900/30'} z-10 transition-all duration-1000`} style={{transitionDelay: "0.3s"}}></div>
                 <div className="flex items-center justify-between">
                   <div className={`w-[45%] pr-8 text-right timeline-item-left ${visibleSections.experience ? 'animate-fade-in' : 'opacity-0'}`} style={{animationDelay: "0.7s"}}>
-                    <h3 className="text-xl font-bold text-primary typing">2018 - 2021</h3>
+                    <h3 className="text-xl font-bold text-primary">2023 - 2025</h3>
                     <p className="text-muted-foreground">Full-time</p>
                   </div>
                   <div className={`w-[45%] pl-8 timeline-item-right ${visibleSections.experience ? 'animate-fade-in' : 'opacity-0'}`} style={{animationDelay: "0.9s"}}>
-                    <h3 className="text-xl font-bold mb-2 typing">Cybersecurity Analyst</h3>
-                    <p className="text-muted-foreground mb-2">Digital Defense Corp</p>
+                    <h3 className="text-xl font-bold mb-2">Sr. Security Engineer - SOAR</h3>
+                    <p className="text-muted-foreground mb-2">Cognizant Technology Solutions</p>
                     <Accordion type="single" collapsible>
                       <AccordionItem value="responsibilities-2" className="animate-scale-in" style={{animationDelay: "1.1s"}}>
                         <AccordionTrigger className="text-green-400 hover-glow">Responsibilities</AccordionTrigger>
                         <AccordionContent>
                           <ul className="list-disc pl-5 space-y-1">
-                            <li className="stagger-item animate-fade-in">Monitored and responded to security incidents using SIEM tools</li>
-                            <li className="stagger-item animate-fade-in">Performed regular security audits and compliance checks</li>
-                            <li className="stagger-item animate-fade-in">Developed security documentation and incident response procedures</li>
-                            <li className="stagger-item animate-fade-in">Conducted security awareness training for staff</li>
+                            <li className="stagger-item animate-fade-in">Conducted preventive analysis of the systems' consoles to establish potential security breaches which resulted in the prevention of up to 99% of unauthorized risks.</li>
+                            <li className="stagger-item animate-fade-in">Provided 24/7 Endpoint and firewall support to resolve Level 1 issues for an international client base, ensuring 100% adherence to service-level agreements for over 5000 Service Requests and Incidents while responding tothem within an average of 5 minutes, with zero SLA breaches over 8 months.</li>
+                            <li className="stagger-item animate-fade-in">Performed comprehensive health checks for over 100 servers covering 38+ enterprises daily, confirming no identified threats and ensuring antivirus updates.</li>
                           </ul>
                         </AccordionContent>
                       </AccordionItem>
@@ -180,12 +182,12 @@ const Home = () => {
                 <div className={`absolute left-1/2 transform -translate-x-1/2 -mt-2 w-5 h-5 rounded-full ${visibleSections.experience ? 'bg-primary animate-pulse-glow' : 'bg-green-900/30'} z-10 transition-all duration-1000`} style={{transitionDelay: "0.6s"}}></div>
                 <div className="flex items-center justify-between">
                   <div className={`w-[45%] pr-8 text-right timeline-item-left ${visibleSections.experience ? 'animate-fade-in' : 'opacity-0'}`} style={{animationDelay: "1.2s"}}>
-                    <h3 className="text-xl font-bold text-primary typing">2016 - 2018</h3>
+                    <h3 className="text-xl font-bold text-primary">2022 - 2023</h3>
                     <p className="text-muted-foreground">Internship</p>
                   </div>
                   <div className={`w-[45%] pl-8 timeline-item-right ${visibleSections.experience ? 'animate-fade-in' : 'opacity-0'}`} style={{animationDelay: "1.4s"}}>
-                    <h3 className="text-xl font-bold mb-2 typing">Security Intern</h3>
-                    <p className="text-muted-foreground mb-2">CyberShield Inc</p>
+                    <h3 className="text-xl font-bold mb-2">Threat Management Intern - ITM</h3>
+                    <p className="text-muted-foreground mb-2">Cognizant Technology Solutions</p>
                     <Accordion type="single" collapsible>
                       <AccordionItem value="responsibilities-3" className="animate-scale-in" style={{animationDelay: "1.6s"}}>
                         <AccordionTrigger className="text-green-400 hover-glow">Responsibilities</AccordionTrigger>
@@ -223,7 +225,7 @@ const Home = () => {
               >
                 <CardContent className="p-6">
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-semibold text-green-400 typing" style={{animationDelay: `${0.2 + index * 0.1}s`}}>{skill.name}</h3>
+                    <h3 className="font-semibold text-green-400" style={{animationDelay: `${0.2 + index * 0.1}s`}}>{skill.name}</h3>
                     <span className="text-green-200">{skill.value}%</span>
                   </div>
                   <Progress className="h-2" value={skill.value} />
@@ -269,7 +271,7 @@ const Home = () => {
                 style={{animationDelay: `${0.2 + index * 0.2}s`}}
               >
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-green-400 typing" style={{animationDelay: `${0.3 + index * 0.2}s`}}>{pub.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-green-400" style={{animationDelay: `${0.3 + index * 0.2}s`}}>{pub.title}</h3>
                   <div className="flex justify-between mb-4">
                     <p className="text-green-200 text-sm">{pub.journal}</p>
                     <p className="text-green-200 text-sm">{pub.year}</p>
@@ -319,7 +321,7 @@ const Home = () => {
                   <span className="text-muted-foreground relative z-10">{project.image}</span>
                 </div>
                 <CardContent className="p-6 bg-black/70 backdrop-blur">
-                  <h3 className="text-xl font-bold mb-2 text-green-400 group-hover:text-green-300 transition-colors typing" style={{animationDelay: `${0.3 + index * 0.2}s`}}>{project.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-green-400 group-hover:text-green-300 transition-colors" style={{animationDelay: `${0.3 + index * 0.2}s`}}>{project.title}</h3>
                   <p className="text-muted-foreground mb-4">
                     {project.description}
                   </p>
