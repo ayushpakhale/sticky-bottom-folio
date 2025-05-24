@@ -74,9 +74,9 @@ const MainLayout = () => {
         </div>
       </div>
       
-      {/* Content overlays the static hero content when scrolling */}
-      <div className="relative z-10 pt-screen min-h-screen">
-        <main className="flex-grow container mx-auto px-4 py-8">
+      {/* Content overlays the static hero content when scrolling with solid background */}
+      <div className="relative z-10 pt-screen min-h-screen bg-background">
+        <main className="flex-grow container mx-auto px-4 py-8 bg-background">
           <Outlet />
         </main>
       </div>
